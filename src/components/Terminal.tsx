@@ -358,7 +358,7 @@ const Terminal = (props: TerminalProps) => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/craig-feldman"
+              href="https://github.com/Vikram1997-hue"
             >
               GitHub
             </a>{" "}
@@ -597,7 +597,7 @@ const Terminal = (props: TerminalProps) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/craig-feldman/personal-website-react"
+            href="https://github.com/Vikram1997-hue/vikTerminal"
           >
             GitHub
           </a>

@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC2B7qHjCFzv1Aq5kfjIbIe_psLG35iskc",
-  authDomain: "personal-website-6a2a9.firebaseapp.com",
-  databaseURL: "https://personal-website-6a2a9.firebaseio.com",
-  projectId: "personal-website-6a2a9",
-  storageBucket: "personal-website-6a2a9.appspot.com",
-  messagingSenderId: "280241671766",
-  appId: "1:280241671766:web:bc863440cededa05f075f7",
-  measurementId: "G-H7KL5J0KG8",
+  apiKey: "AIzaSyDjY5TUjCkunJ_5Vaf9hItpeDcPNNZ3KZc",
+  authDomain: "vikterminal-e9603.firebaseapp.com",
+  databaseURL: "https://vikterminal-e9603.firebaseio.com",
+  projectId: "vikterminal-e9603",
+  storageBucket: "vikterminal-e9603.appspot.com",
+  messagingSenderId: "55577252766",
+  appId: "1:55577252766:web:ca547ebf6350da1719fc8f",
+  measurementId: "G-23C37590S8", 
 };
 
 // Initialize Firebase
