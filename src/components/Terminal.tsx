@@ -66,7 +66,7 @@ const Terminal = (props: TerminalProps) => {
     "website",
   ] as const;
   type EchoCommand = typeof echoCommands[number];
-  const utilityCommands = ["clear", "all", "cv"] as const;
+  const utilityCommands = ["clear", "all", "cv", "exit"] as const;
   type UtilityCommand = typeof utilityCommands[number];
   const allCommands = [...echoCommands, ...utilityCommands] as const;
   type Command = typeof allCommands[number];
@@ -117,6 +117,8 @@ const Terminal = (props: TerminalProps) => {
           <dd>How I built this</dd>
           <dt>all</dt>
           <dd>Tell me everything</dd>
+          <dt>exit</dt>
+          <dd>Close this tab and exit. Hope you come back soon!</dd>
           <dt>clear</dt>
           <dd>Clears the terminal of all output</dd>
         </dl>
@@ -125,45 +127,33 @@ const Terminal = (props: TerminalProps) => {
     about: (
       <div>
         <p>
-          Hey there! Thanks for taking such a keen interest in me. Hopefully
-          you're not gonna spam or stalk me... Okay, I guess if you must stalk
-          me, just give me fair warning so I can look presentable when you
-          arrive at my door.
+          Hey there! Thanks for taking such a keen interest in me. Here's the story of how you ended up staring at this website on your phone - I encoded the URL onto an NFC tag, and flashed the tag in front of your phone. NFC needs about 1 second to transmit data to devices - enough time for me to get the job done, and then to make a safe retreat out of arm's reach. Pretty cool, right?
         </p>
         <p>
-          Right, so, where to begin? Well, my parents met in... Nah, just
-          kidding.
+          Don't worry - your phone is <b><i>not</i></b> being hacked, and none of your data is being stored to my database. The purpose of this interaction is to have you know everything about me as a Software Engineer and Tech Enthusiast.
+        </p>
+        <p>
+          Right, so, where do I begin? Well, my parents met in... Nah, just kidding.
           <br />
-          As you probably know, my name is {glow("Vikramaditya Bhatnagar")}. I'm a{" "}
+          As you might know, my name is {glow("Vikramaditya Bhatnagar")}. I'm a{" "}
           {getAge(new Date(1997, 7, 22))} year old {glow("Computer Scientist")}{" "}
-          born and bred in the beautiful South Africa and currently living in
-          Gurugram.
+          born and raised in serene ol' Dehradun at the foothills of the Himalayas
+          and currently living in Gurugram.
         </p>
         <p>
-          I graduated with distinction from the University of Cape Town with a
-          Bachelor of Business Science degree in Computer Science. It comprised
-          of four years of computer science courses, as well as many business
-          courses (for example, I completed three years of economics, stats, and
-          finance).
+          I graduated from Symbiosis International Univeristy, Pune, with a Bachelor of Computer Applications degree. It comprised of three years of computer science courses, as well as a few business courses (ex: economics and stats).
         </p>
         <p>
-          I also have an MSc degree in Computer Science from the University of
-          Oxford, where I was awarded a full academic scholarship. Studying
-          abroad was an amazing experience - highlights include early morning
-          rowing, croquet, formal dinners, and just exploring Oxford with
-          amazing people and friends.
+          I also have a Master's degree in Computer Applications from IP University, New Delhi. It was during this time that I started my first programming-related job, working as a Full-Stack Software Developer at a startup. I was also a part of a few different bands while at Uni; highlights include going out on tour with Sunidhi Chauhan in October 2019, getting signed to a Record Label, and being on stage, making countless memories with some amazing people.
         </p>
         <p>
-          Some of my interests include: machine learning, the blockchain and
-          cryptography, and leveraging these tools to help solve problems,
-          particularly in the {glow("Fintech")} realm. I'm also pretty into fly
-          fishing!
+          As a Tech Enthusiast, I'm really interested in Machine Learning, the Blockchain and Cryptography, creating software solutions to help solve problems (particularly in the {glow("Fintech")} realm), and, well, creating stuff like this.
         </p>
         <p>
           My previous formal work experience includes:
           <ul>
-            <li>
-              creating software solutions for the{" "}
+          <li>
+              writing an ETL pipeline for cleaning and studying bank data for the{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -174,31 +164,23 @@ const Terminal = (props: TerminalProps) => {
               ;
             </li>
             <li>
-              working for a great content creation app called{" "}
+              working on a website-building tool targeting developing countries, called{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://madewithover.com"
               >
-                Over
+                Softlink
               </a>
               ;
             </li>
             <li>
-              helping people to buy, store, and learn about cryptocurrency at{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://luno.com"
-              >
-                Luno
-              </a>
-              .
+              creating Software Solutions for countless clients, domestic and foreign.
             </li>
           </ul>
         </p>
         <p>
-          Nowadays I'm developing a method to download food... I wish! I am
+          Nowadays I'm developing a method to download happiness from servers in Amsterdam... I wish! I am
           currently working at the{" "}
           <a
             target="_blank"
@@ -251,8 +233,8 @@ const Terminal = (props: TerminalProps) => {
           Material-UI components) and Firebase.
         </p>
         <p>
-          You can also check out my MSc thesis{" "}
-          <a href="MSc_Thesis.pdf" download="Craig Feldman - MSc Thesis.pdf">
+          You can also check out my MCA thesis{" "}
+          <a href="MSc_Thesis.pdf" download="Vikramaditya Bhatnagar - MCA Thesis.pdf">
             An investigation into the applicability of a blockchain based voting
             system
           </a>{" "}
@@ -603,7 +585,7 @@ const Terminal = (props: TerminalProps) => {
           </a>
           . Feel free to use this website for inspiration, or go ahead and copy
           some of the code! If you do, all I ask is that you give this site a
-          mention :)
+          mention, and add a star to the project on GitHub :)
         </p>
       </>
     ),
@@ -663,6 +645,7 @@ const Terminal = (props: TerminalProps) => {
             "repo",
             "contact",
             "website",
+            "exit",
           ].map((command) => (
             <>
               <div className="terminal-heading">{command}</div>
@@ -679,6 +662,14 @@ const Terminal = (props: TerminalProps) => {
           setOutput([...output, commandRecord]);
           downloadFile("CV.pdf", "Vikramaditya Bhatnagar - Curriculum Vitae.pdf");
           break;
+        }
+        case "exit": {
+          // const newWindow = window.open("about:blank", "_self");
+          // window.close();
+          // newWindow?.close();
+          window.opener = null;
+          window.open("", "_self");
+          window.close();
         }
       }
     }
