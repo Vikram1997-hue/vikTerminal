@@ -630,8 +630,8 @@ const Terminal = (props: TerminalProps) => {
       setHistoryIndex(history.length + 1);
     }
 
-    // Now process command, without ignoring case
-    const inputCommand = input; //.toLowerCase();
+    // Now process command (case-insensitive)
+    const inputCommand = input.trim().toLowerCase();
     if (!isValidCommand(inputCommand)) {
       setOutput([
         ...output,

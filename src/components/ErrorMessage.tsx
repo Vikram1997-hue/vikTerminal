@@ -9,7 +9,7 @@ const ErrorMessage = (props: ErrorMessageProps) => {
       <span className="terminal-error">
         {`command not found: ${props.command}.`}
       </span>
-      <span>{`Type 'help' to view a list of available commands (NOTE: commands are case-sensitive)`}</span>
+      <span>{`Type 'help' to view a list of available commands (hit enter after typing your command)`}</span>
     </div>
   );
 };
