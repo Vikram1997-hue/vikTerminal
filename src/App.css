@@ -57,7 +57,7 @@
   
   20%, 24%, 55% {        
       text-shadow: none;
-  }    
+  }
 }
 
 .terminal-welcome-message {
@@ -183,13 +183,71 @@ table {
   color: #d4f4f9;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1200px) {
   .terminal-banner {
-    font-size: 9.5px;
+    font-size: 21px;
+  }
+  .terminal-content {
+    font-size: 19px;
+    line-height: 22.5px;
+  }
+  .footer {
+    font-size: 17px;
+  }
+  td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0px;
+    border: 0px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .terminal-banner {
+    font-size: 17px;
+  }
+  .terminal-content {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .footer {
+    font-size: 15px;
+  }
+  td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0px;
+    border: 0px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .terminal-banner {
+    font-size: 11px;
   }
   .terminal-content {
     font-size: 12px;
     line-height: 15px;
+  }
+  .footer {
+    font-size: 8px;
+  }
+  td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0px;
+    border: 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .terminal-banner {
+    font-size: 8.7px;
+  }
+  .terminal-content {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12px;
   }
   .footer {
     font-size: 9px;
@@ -204,11 +262,12 @@ table {
 
 @media only screen and (max-width: 400px) {
   .terminal-banner {
-    font-size: 8px;
+    font-size: 7.7px;
   }
   .terminal-content {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 11px;
+    line-height: 15px;
+    padding: 12px;
   }
   .footer {
     font-size: 7px;
