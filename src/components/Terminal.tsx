@@ -215,30 +215,17 @@ const Terminal = (props: TerminalProps) => {
     projects: (
       <>
         <p>
-          I'm always working on comp sciey (not really a word) things. Why don't
-          you check out a few of my public code repositories? Just type 'repo'
-          to get the links.
+          I've been tinkering for a while now. Why don't you check out a few of my public code repositories? Just type 'repo' to get the links.
         </p>
         <p>
-          I've also dabbled in producing a{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://weaverworks.co.za"
-          >
-            property-management portal
-          </a>{" "}
-          that provides property managers and buildings with some really cool
-          software and tools. The project uses TypeScript, Node.js, React (with
-          Material-UI components) and Firebase.
+          I'm always open to working on something cool on the side, so if you ever have something in mind, give me a holler! You can find my socials and contact information by typing 'contacts'.
         </p>
         <p>
-          You can also check out my MCA thesis{" "}
+          You can also check out my MCA thesis on developing{" "}
           <a href="MSc_Thesis.pdf" download="Vikramaditya Bhatnagar - MCA Thesis.pdf">
-            An investigation into the applicability of a blockchain based voting
-            system
-          </a>{" "}
-          - this one took a while!
+            an Encrypted File Sharing System that operates over the Blockchain
+          </a>
+          {" "}- this one took a while!
         </p>
       </>
     ),
@@ -289,10 +276,18 @@ const Terminal = (props: TerminalProps) => {
               rel="noreferrer"
             >Vikramaditya Bhatnagar</a>
           </dd>
-          <dt>Smoke signals</dt>
-          <dd>general Cape Town region</dd>
-          <dt>myspace</dt>
-          <dd>just kidding</dd>
+          <dt>Check out some of my music</dt>
+          <dd>
+            <a 
+              href="https://www.instagram.com/vukrim/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
+          </dd>
+          <dt>Myspace</dt>
+          <dd>Just kidding</dd>
           <dt>Book a 1:1 Consulting Call with me</dt>
           <dd>
             <a 
@@ -311,7 +306,7 @@ const Terminal = (props: TerminalProps) => {
           <dd>'Rising Star' at <a href="https://www.appventurez.com/" target="_blank" rel="noreferrer">Appventurez</a> for the month of August</dd>
 
           <dt>2021</dt>
-          <dd>Computer Science Merit Award (top 3 in Batch) - Sem VI</dd>
+          <dd>Computer Science Merit Award (top 3 in Batch) - Sem VI (for Thesis)</dd>
           <dd>Computer Science Merit Award (top 3 in Batch) - Sem V</dd>
 
           <dt>2018</dt>
@@ -345,7 +340,14 @@ const Terminal = (props: TerminalProps) => {
               GitHub
             </a>{" "}
             - Unfortunately, I could only make a small subset of my projects
-            public.
+            public. I normally spend my time contributing to the{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://photos.app.goo.gl/qW7JYTuh4yo8fzhG8"
+            >
+              codebase at work
+            </a>{" "};P
           </li>
           <li>
             <a
@@ -546,34 +548,49 @@ const Terminal = (props: TerminalProps) => {
     website: (
       <>
         <p>
-          I built this website from scratch using {glow("React")} and{" "}
-          {glow("TypeScript")}. It is a rewrite of my{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/craig-feldman/personal-website"
-          >
-            previous
-          </a>{" "}
-          website that used{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://terminal.jcubic.pl/"
-          >
-            JQuery Terminal Plugin
-          </a>{" "}
-          (and some inspiration from{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="http://www.ronniepyne.com"
-          >
-            Ronnie Pyne
-          </a>
-          ). Some visual elements, like the menu at the bottom of the screen,
-          are just for aesthetic purposes :)
+          I built this website using {glow("React")} and {glow("TypeScript")}. The website has been hosted using {glow("GoDaddy")} (although I might switch to AWS sometime in the near future). For NFC encoding, I used a simple app called {glow("NXP TagWriter")} and an NFC tag I bought online. Some visual elements, like the menu at the bottom of the screen, are just for aesthetic purposes.
         </p>
+        <p>
+          Resources that made this project possible include -
+          <dl>
+            <dd>
+              Forrest Knight's{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/watch?v=KtYby2QN0kQ"
+              >
+                video on the same topic 
+              </a>
+            </dd>
+          </dl>
+          <dl>
+            <dd>
+              Random ASCII art generators on the Internet (I used{" "}
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20"
+              >
+                this one by Patorjk 
+              </a>
+              )
+            </dd>
+          </dl>
+          <dl>
+            <dd>
+              Craig Feldman's{" "}
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/craig-feldman/personal-website-react"
+              >
+                concept repo
+              </a>
+            </dd>
+          </dl>
+        </p>
+
         <p>
           The source code for this site can be found on{" "}
           <a
@@ -583,9 +600,7 @@ const Terminal = (props: TerminalProps) => {
           >
             GitHub
           </a>
-          . Feel free to use this website for inspiration, or go ahead and copy
-          some of the code! If you do, all I ask is that you give this site a
-          mention, and add a star to the project on GitHub :)
+          . If you're a fresher looking for a job, feel free to use this website for inspiration, or go ahead and copy some of the code! If you do, all I ask is that you give this site a mention, and add a star to the project on GitHub :)
         </p>
       </>
     ),
