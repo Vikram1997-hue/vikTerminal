@@ -330,36 +330,22 @@ const Terminal = (props: TerminalProps) => {
     ),
     repo: (
       <>
-        <ul>
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/Vikram1997-hue"
-            >
-              GitHub
-            </a>{" "}
-            - Unfortunately, I could only make a small subset of my projects
-            public. I normally spend my time contributing to the{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://photos.app.goo.gl/qW7JYTuh4yo8fzhG8"
-            >
-              codebase at work
-            </a>{" "};P
-          </li>
-          <li>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://bitbucket.org/fldcra001"
-            >
-              Bitbucket
-            </a>{" "}
-            - A few university projects.
-          </li>
-        </ul>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/Vikram1997-hue"
+        >
+          GitHub
+        </a>{" "}
+        - Unfortunately, I could only make a small subset of my projects
+        public. I normally spend my time contributing to the{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://photos.app.goo.gl/qW7JYTuh4yo8fzhG8"
+        >
+          codebase at work
+        </a>{" "};P
       </>
     ),
     skills: (
