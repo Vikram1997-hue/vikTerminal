@@ -202,7 +202,10 @@ const Terminal = (props: TerminalProps) => {
           opportunities. My contact details can be found by typing 'contact',
           and if you would like to check out my {glow("CV")}, simply type 'cv'
           or click{" "}
-          <a href="CV.pdf" download="Vikramaditya Bhatnagar - Curriculum Vitae.pdf">
+          {/* <a href="../../public/CV.pdf" download="Vikramaditya Bhatnagar - Curriculum Vitae.pdf">
+            here
+          </a> */}
+          <a href="CV.pdf" download="VIKRAMADITYA BHATNAGAR - Resume.pdf">
             here
           </a>
           .
@@ -219,7 +222,7 @@ const Terminal = (props: TerminalProps) => {
         </p>
         <p>
           You can also check out my MCA thesis on developing{" "}
-          <a href="MSc_Thesis.pdf" download="Vikramaditya Bhatnagar - MCA Thesis.pdf">
+          <a href="MSc_Thesis.pdf" download="MCA THESIS.pdf">
             an Encrypted File Sharing System that operates over the Blockchain
           </a>
           {" "}- this one took a while!
@@ -658,7 +661,8 @@ const Terminal = (props: TerminalProps) => {
         }
         case "cv": {
           setOutput([...output, commandRecord]);
-          downloadFile("CV.pdf", "Vikramaditya Bhatnagar - Curriculum Vitae.pdf");
+          downloadFile("CV.pdf", "VIKRAMADITYA BHATNAGAR - Resume.pdf");
+          // downloadFile("../../public/CV.pdf", "Vikramaditya Bhatnagar - Curriculum Vitae.pdf");
           break;
         }
         // case "exit": {
