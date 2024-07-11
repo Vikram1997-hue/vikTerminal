@@ -66,7 +66,7 @@ const Terminal = (props: TerminalProps) => {
     "website",
   ] as const;
   type EchoCommand = typeof echoCommands[number];
-  const utilityCommands = ["clear", "all", "cv", "exit"] as const;
+  const utilityCommands = ["clear", "all", "cv"] as const;
   type UtilityCommand = typeof utilityCommands[number];
   const allCommands = [...echoCommands, ...utilityCommands] as const;
   type Command = typeof allCommands[number];
@@ -91,16 +91,13 @@ const Terminal = (props: TerminalProps) => {
     help: (
       <div>
         <p>
-          Wow, I thought the only people who would visit this site would be bots
-          and spammers, guess I was wrong. Just type any of the commands below
-          to get some more info. You can even type a few letters and press [tab]
-          or '.' to autocomplete.
+          Welcome to the vikTerminal manual page! Just type any of the commands below to get some more info. You can even type a few letters and press [tab] or '.' to autocomplete.
         </p>
         <dl>
           <dt>about</dt>
           <dd>Everything (well, not everything) about me</dd>
           <dt>projects</dt>
-          <dd>Yeah, I've made some cool stuff before</dd>
+          <dd>I've made some cool stuff before</dd>
           <dt>career</dt>
           <dd>My employment history</dd>
           <dt>skills</dt>
@@ -117,8 +114,8 @@ const Terminal = (props: TerminalProps) => {
           <dd>How I built this</dd>
           <dt>all</dt>
           <dd>Tell me everything</dd>
-          <dt>exit</dt>
-          <dd>Close this tab and exit. Hope you come back soon!</dd>
+          {/* <dt>exit</dt>
+          <dd>Close this tab and exit. Hope you come back soon!</dd> */}
           <dt>clear</dt>
           <dd>Clears the terminal of all output</dd>
         </dl>
@@ -168,7 +165,7 @@ const Terminal = (props: TerminalProps) => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://madewithover.com"
+                href="https://softlink.ai/"
               >
                 Softlink
               </a>
@@ -218,7 +215,7 @@ const Terminal = (props: TerminalProps) => {
           I've been tinkering for a while now. Why don't you check out a few of my public code repositories? Just type 'repo' to get the links.
         </p>
         <p>
-          I'm always open to working on something cool on the side, so if you ever have something in mind, give me a holler! You can find my socials and contact information by typing 'contacts'.
+          I'm always open to working on something cool on the side, so if you ever have something in mind, give me a holler! You can find my socials and contact information by typing 'contact'.
         </p>
         <p>
           You can also check out my MCA thesis on developing{" "}
@@ -646,7 +643,7 @@ const Terminal = (props: TerminalProps) => {
             "repo",
             "contact",
             "website",
-            "exit",
+            // "exit",
           ].map((command) => (
             <>
               <div className="terminal-heading">{command}</div>
@@ -664,14 +661,14 @@ const Terminal = (props: TerminalProps) => {
           downloadFile("CV.pdf", "Vikramaditya Bhatnagar - Curriculum Vitae.pdf");
           break;
         }
-        case "exit": {
-          // const newWindow = window.open("about:blank", "_self");
-          // window.close();
-          // newWindow?.close();
-          window.opener = null;
-          window.open("", "_self");
-          window.close();
-        }
+        // case "exit": {
+        //   // const newWindow = window.open("about:blank", "_self");
+        //   // window.close();
+        //   // newWindow?.close();
+        //   window.opener = null;
+        //   window.open("", "_self");
+        //   window.close();
+        // }
       }
     }
   };
