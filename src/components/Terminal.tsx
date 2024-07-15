@@ -222,7 +222,7 @@ const Terminal = (props: TerminalProps) => {
         </p>
         <p>
           You can also check out my MCA thesis on developing{" "}
-          <a href="MSc_Thesis.pdf" download="MCA THESIS.pdf">
+          <a href="MCA_Thesis.pdf" download="MCA THESIS.pdf">
             an Encrypted File Sharing System that operates over the Blockchain
           </a>
           {" "}- this one took a while!
