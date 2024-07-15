@@ -19,9 +19,8 @@ const getAge = (birthDate: Date) => {
   return age;
 };
 
-const downloadFile = (uri: string, downloadName: string) => {
+const downloadFile = (uri: string) => {
   const link = document.createElement("a");
-  link.download = downloadName;
   link.href = uri;
   link.click();
   link.remove();
@@ -35,7 +34,7 @@ type TerminalProps = {
   footerFullforms?: string[];
 };
 const Terminal = (props: TerminalProps) => {
-  const { 
+  const {
     terminalPrompt = ">", 
     banner, 
     welcomeMessage, 
@@ -205,7 +204,8 @@ const Terminal = (props: TerminalProps) => {
           {/* <a href="../../public/CV.pdf" download="Vikramaditya Bhatnagar - Curriculum Vitae.pdf">
             here
           </a> */}
-          <a href="CV.pdf" download="VIKRAMADITYA BHATNAGAR - Resume.pdf">
+          {/* <a href="CV.pdf" download="VIKRAMADITYA BHATNAGAR - Resume.pdf"> */}
+          <a href="https://drive.usercontent.google.com/u/0/uc?id=1AzLtnYBFT_pk2lgPDDEwSVVWHXt6bgv7&export=download">
             here
           </a>
           .
@@ -222,7 +222,8 @@ const Terminal = (props: TerminalProps) => {
         </p>
         <p>
           You can also check out my MCA thesis on developing{" "}
-          <a href="MCA_Thesis.pdf" download="MCA THESIS.pdf">
+          {/* <a href="MCA_Thesis.pdf" download="MCA THESIS.pdf"> */}
+          <a href="https://drive.usercontent.google.com/u/0/uc?id=1BAh7lled13OVaranzdXYbn64-jzUFvlR&export=download">
             an Encrypted File Sharing System that operates over the Blockchain
           </a>
           {" "}- this one took a while!
@@ -661,8 +662,8 @@ const Terminal = (props: TerminalProps) => {
         }
         case "cv": {
           setOutput([...output, commandRecord]);
-          downloadFile("CV.pdf", "VIKRAMADITYA BHATNAGAR - Resume.pdf");
-          // downloadFile("../../public/CV.pdf", "Vikramaditya Bhatnagar - Curriculum Vitae.pdf");
+          // downloadFile("CV.pdf", "VIKRAMADITYA BHATNAGAR - Resume.pdf");
+          downloadFile("https://drive.usercontent.google.com/u/0/uc?id=1AzLtnYBFT_pk2lgPDDEwSVVWHXt6bgv7&export=download");
           break;
         }
         // case "exit": {
