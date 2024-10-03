@@ -663,7 +663,7 @@ const Terminal = (props: TerminalProps) => {
         case "cv": {
           setOutput([...output, commandRecord]);
           // downloadFile("CV.pdf", "VIKRAMADITYA BHATNAGAR - Resume.pdf");
-          downloadFile("https://drive.usercontent.google.com/u/0/uc?id=1AzLtnYBFT_pk2lgPDDEwSVVWHXt6bgv7&export=download");
+          downloadFile("https://drive.usercontent.google.com/u/0/uc?id=1q99PAwiVJVFnjp_UtDtMGPdRfmWiZAbW&export=download");
           break;
         }
         // case "exit": {
